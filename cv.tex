@@ -1,0 +1,107 @@
+
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage[no-math]{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{libertine}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize}
+\subsubsectionfont{\mdseries\upshape\large}
+
+% PDF SETUP
+\usepackage[bookmarks, colorlinks, breaklinks,
+pdftitle={Raf Huys- vita},
+pdfauthor={Raf Huys},
+]{hyperref}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue}
+
+% DOCUMENT
+\begin{document}
+{\LARGE Raf Huys}\\[1cm]
+Breedstraat 187\\
+9100, Sint-Niklaas \texttt{}
+Belgium\\[.2cm]
+Phone: \texttt{0032494654845}\\
+Email: \href{mailto:raf.huys@gmail.com}{raf.huys@gmail.com}\\
+Born:  April 15, 1983---Temse, Belgium\\
+Nationality:  Belgian
+
+%%\hrule
+\section*{Links}
+Github: \href{http://www.github.com/raffiki}{raffiki}
+
+%%\hrule
+\section*{Current job}
+\emph{Backend Developer}, \href{http://www.planza.com}{Planza}, Belgium
+
+%%\hrule
+\section*{Experience}
+\noindent
+\years{2010-now}Independent IT Consultant\\
+\years{2008-2009}National Institute of Geography, Brussels\\
+\years{2007}GEO Solutions, Antwerp
+
+%%\hrule
+\section*{Projects}
+\noindent
+\years{2012-2013}Backend development of planning webapplication \href{http://www.planza.com}{Planza}\\
+\years{}Made switch from PHP/MySQL to Node.js/MongoDB\\
+\years{}Co-worked on frontend in Backbone.js\\
+\years{2011}multiple Drupal projects\\
+\years{2008-2019}UML modelling for Grootschalig Referentie Bestand Vlaanderen\\
+
+
+%\hrule
+\section*{Areas of specialization}
+\noindent
+\years{general}Backend web application development, object-oriented analysis, unix\\
+\years{languages}JavaScript, PHP, Java, Ruby (on Rails), Python (Django)\\
+\years{DB}SQL, MongoDB, Redis, CouchDB
+
+%\hrule
+\section*{Education}
+\noindent
+\years{2013}\textsc{MSc} in Computer Science, Vrije Universiteit Brussel\\
+\years{2009-2012}\textsc{Graduate} in Informatics, GroepT Leuven \\
+\years{2001-2005}\textsc{MSc} in Geography, Universiteit Gent\\
+\years{1995-2001}\textsc Latin-Math, Broederschool Sint-Niklaas
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+    {\scriptsize  Last updated: \today\- }
+\end{center}
+
+\end{document}
